@@ -21,4 +21,21 @@ router.post('/spellCheck', jsonParser, (req, res) => {
 
 })
 
+router.post('/typeSpeed', jsonParser, (req, res) => {
+
+    const keystroke = 5
+
+    const time = req.body.time
+    const sum = req.body.summary
+
+    var words = sum.split(" ")
+
+    var count = sum.length
+
+    var type_speed = count / time * 60 * keystroke
+
+    res.status(200).json({ "words": words, "typeSpeed": type_speed })
+})
+
+
 export default router;

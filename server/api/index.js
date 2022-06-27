@@ -34,7 +34,7 @@ router.post('/typeSpeed', jsonParser, (req, res) => {
 
     var type_speed = count / time * 60 * keystroke
 
-    res.status(200).json({ "words": words, "typeSpeed": type_speed })
+    res.status(200).json({ "words": words.length, "typeSpeed": type_speed })
 })
 
 

@@ -17,7 +17,7 @@ router.post('/spellCheck', jsonParser, (req, res) => {
     console.log(sum)
     const check = spell.check(sum)
     console.log(check)
-    res.status(200).json({ "count": check.length })
+    res.status(200).json({ "Misspelled count": check.length })
 
 })
 

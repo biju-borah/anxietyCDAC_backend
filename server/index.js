@@ -3,7 +3,7 @@ import apiRoute from './api/index.js'
 
 const app = express()
 
-const port = process.env.PORT || 8800
+const port = process.env.PORT || 3030
 
 
 app.use('/api', apiRoute)
